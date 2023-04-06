@@ -41,6 +41,7 @@ console.log(movieData);
 app.get('/api/movies', async (req, res) => {
     
     //res.json(movieData)
+    console.log(process.env.MONGO_CONNECT);
     const client = new MongoClient(process.env.MONGO_CONNECT);
     
     await client.connect();
